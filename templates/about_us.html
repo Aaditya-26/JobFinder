@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %} 
+
+<section class="mt-4">
+  <div class="container" style="margin: -65px auto;">
+      <h3 class="heading">About JobFinder</h3>
+  </div>
+
+  <section class="site-section pb-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <a data-fancybox data-ratio="2" class="block__96788">
+            <img src="{% static 'img/job_single.png' %}" alt="Image" class="img-fluid img-shadow">
+          </a>
+        </div>
+        <div class="col-lg-5 ml-auto">
+          <h2 class="section-title mb-3">Welcome to JobFinder</h2>
+          <p class="lead">At JobFinder, we are on a mission to empower individuals and connect them with exciting career opportunities in the world of freelancing and web development. We are more than just a job search platform; we are your partner in your journey to success.</p>
+          <p>Discover a world of possibilities as you explore job opportunities and connect with forward-thinking employers on JobFinder. Our commitment to excellence ensures that we provide high-quality services and innovative products designed to transform your career aspirations into reality.</p>
+          <p>JobFinder is your trusted companion in your pursuit of professional growth. We believe in the potential of every job seeker and the promise of every employer. Our platform is a place where aspirations meet opportunities, where dreams are nurtured, and where success stories are created.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section pb-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 order-md-2">
+          <a data-fancybox data-ratio="2" class="block__96788">
+            <img src="{% static 'img/hero.jpg' %}" alt="Image" class="img-fluid img-shadow">
+          </a>
+        </div>
+        <div class="col-lg-5 ml-auto">
+          <h2 class="section-title mb-3">Empowering Workers with JobFinder</h2>
+          <p class="lead">Welcome to JobFinder's "About Us" page. Our unwavering dedication is to deliver exceptional services and products to our valued users, with a special focus on job seekers like you.</p>
+          <p>Explore a world of exciting job opportunities and connect with like-minded professionals on JobFinder. Our platform is designed to make your job search a seamless and rewarding experience, helping you find the perfect job that matches your aspirations and skills.</p>
+          <p>Discover a community that supports your career growth, where you can build meaningful connections, and where your potential is recognized. With JobFinder, we are committed to guiding you toward your dream job, whether you're seeking full-time employment, part-time work, or even an internship opportunity.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+</section>
+
+{% endblock %}

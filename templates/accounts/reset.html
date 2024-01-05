@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="col-lg-6 offset-3 mt-3" style="height: 50.9vh; display: flex; flex-direction: column; justify-content: center;">
+    <div class="box">
+        <h3 class="heading">Enter new password</h3>
+        <p class="lead">Please enter your new password twice to verify that you typed it correctly.</p>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="form-group">
+                <label for="id_{{ field.name }}">{{ field.label }}</label>
+                <input type="{{ field.field.widget.input_type }}" 
+                       class="form-control"
+                       name="{{ field.name }}"
+                       id="id_{{ field.name }}"
+                       placeholder="{{ field.field.widget.attrs.placeholder }}"
+                       {% if field.field.required %} required {% endif %}
+                       {% if field.name == 'password' %} minlength="8" {% endif %}>
+                {% if field.name == 'confirm_password' %}
+                    <small class="form-text text-muted">Please enter the same password again for confirmation.</small>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-white-primary"><i class="fa fa-sign-in"></i> Change My Password</button><br>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
