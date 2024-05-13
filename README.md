@@ -35,7 +35,7 @@ python3.8 -m venv virtualenv
 ```
 #### Activate the virtual environment:
 ```bash 
-source venv/bin/activate
+source virtualenv/bin/activate
 ```
 #### Clone the repository and install the required packages:
 ```bash
